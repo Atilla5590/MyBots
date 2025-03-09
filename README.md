@@ -3,6 +3,8 @@ This are the reddit bots i made
 TACT-bot - For the r/theunitedwords
 Automodsucks - For the r/downvoteautomod
 
+- WARNING: Bots are against reddit TOS i am not responsible for your account actions.
+
 # Guide
 1. First install python above 3.8
 2. Install PIP there are many ways to install PIP

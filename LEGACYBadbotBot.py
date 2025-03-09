@@ -2,11 +2,11 @@ import praw
 import time
 
 reddit = praw.Reddit(
-    client_id="XEN99ZTZrtutFbpY6zMH_Q",
-    client_secret="CdVNecsSlt0GW5l5ufGbSxVXbmrVBA",
-    password="thealliance123",
-    user_agent="bot3478615",
-    username="AutomodSucks-4327982",
+    client_id="",
+    client_secret="",
+    password="",
+    user_agent="",
+    username="",
 )
 
 subreddit = reddit.subreddit("downvoteautomod")

@@ -1,5 +1,13 @@
+# Start of the program
+print("program has now Started")
+
+print("Importing PRAW")
 import praw
+print("Importing Time")
 import time
+print("Imports succesful Imported: PRAW, time")
+
+print("Sharing credientials with PRAW")
 
 reddit = praw.Reddit(
     client_id="",
@@ -8,24 +16,33 @@ reddit = praw.Reddit(
     user_agent="",
     username="",
 )
+print("Credientials now shared with PRAW")
+subreddit=reddit.subreddit("downvoteautomod")
+alreadychecked=[]
+infinity=99999999999999999999
+for d in range(infinity):
+    posts = subreddit.new(limit=1)
+    for idpost in posts:
+        print(idpost)
+    print(idpost.id)
 
-subreddit = reddit.subreddit("downvoteautomod")
-checked_comments = set()  
-print("Bot started...")
-
-while True:
-    try:
-        for comment in subreddit.comments(limit=25):  
-            if comment.author == "AutoModerator" and comment.id not in checked_comments:
-                age = time.time() - comment.created_utc  
-                if age <= 120: 
-                    comment.reply("bad bot")
-                    print(f"Replied to: {comment.id}")
-                    checked_comments.add(comment.id)
-        
-        time.sleep(10)
-    except Exception as e:
-        print(f"Error: {e}")
+    last = len(alreadychecked)
+    if alreadychecked:
+        last = last-1
+        checker = alreadychecked[last]
+    else:
+        checker=00
+    if not idpost.id == checker:
+        commentid=idpost.comments
+        for textid in commentid:
+            if "AutoModerator allows anything to be commented by the config file" in textid.body:
+                textid.reply("bad bot")
+                print("its Automod which is badass")
+            else:
+                print("its not him good.")
+        alreadychecked.append(idpost.id)
+    else:
+        print("same post going to next in 60 seconds")
         time.sleep(60)
-
-print("Program finish")
+#end of the program
+print("Program has been finished")

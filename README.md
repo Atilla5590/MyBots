@@ -23,6 +23,6 @@ This are the reddit bots i made
 6. Make an application and select Script
 7. Click create
 8. Enter the credientials in the setup
-9. The password MUST be put in
-10. Go to your python terminal (open if closed)
-11. Now run the script
+   - The password MUST be put in
+9. Go to your python terminal (open if closed)
+10. Now run the script

@@ -1,7 +1,10 @@
 # These are my bots i used with Reddit
 This are the reddit bots i made
-TACT-bot - For the r/theunitedwords (not shared)
-Automodsucks - For the r/downvoteautomod
+- TACT-bot - For the r/theunitedwords (not shared)
+- Automodsucks - For the r/downvoteautomod
+  - Legacy Bot - this is an original version of the bot.
+  - Age limited Bot - this is an version of the bot that has an commenting limit depending on when ago was automoderator replied.
+  - No Age limited Bot - this is an version of the bot that still has an limit but not the age limit
 
 # Some notes
 
